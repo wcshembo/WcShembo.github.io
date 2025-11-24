@@ -1,0 +1,1728 @@
+/* ========================================
+   GetRightWithya - Main Stylesheet
+   Author: Wunga Shembo
+   Project: Content Marketing Website
+   ======================================== */
+
+/* ========================================
+   GLOBAL STYLES AND RESET
+   ======================================== */
+
+/* Universal box-sizing reset: Ensures that padding and borders are included
+   in the element's total width and height, making layout calculations more predictable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body: Sets the base font family, size, line height, and colors for the entire website.
+   The font stack provides fallbacks for different operating systems.
+   Line height of 1.6 ensures comfortable reading with adequate spacing between lines.
+   Color scheme uses a dark gray for text (#333) for better readability than pure black */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Links: Removes default underline and sets color to match the brand.
+   Text decoration is removed for a cleaner look */
+a {
+    text-decoration: none;
+    color: #4f46e5;
+}
+
+/* Link hover state: Provides visual feedback when users hover over links.
+   The darker shade indicates interactivity */
+a:hover {
+    color: #3730a3;
+}
+
+/* List styles: Removes default list styling for cleaner custom designs */
+ul {
+    list-style: none;
+}
+
+/* Image styles: Makes all images responsive by default.
+   max-width: 100% ensures images never exceed their container width.
+   height: auto maintains aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+
+/* Header: Main header container with gradient background from indigo to purple.
+   Provides brand identity and navigation. Fixed positioning would make it sticky,
+   but we're using static for this project. White text color for contrast against
+   dark background */
+header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Content: Container for logo and contact info using flexbox.
+   max-width: 1200px centers content and prevents it from stretching too wide.
+   Flexbox with space-between pushes logo left and contact info right */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo Section: Contains the main site title and tagline */
+.logo-section h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Tagline: Smaller text below the logo providing additional context.
+   Slightly transparent to create visual hierarchy */
+.tagline {
+    font-size: 14px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Header Contact: Contact information in the header.
+   Right-aligned text and smaller font size */
+.header-contact {
+    text-align: right;
+}
+
+.header-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Icon spacing: Adds space between Font Awesome icons and text */
+.header-contact i {
+    margin-right: 8px;
+}
+
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+
+/* Navigation: Main navigation container.
+   max-width and centering keeps nav aligned with page content */
+nav {
+    max-width: 1200px;
+    margin: 15px auto 0;
+    padding: 0 20px;
+}
+
+/* Navigation list: Uses flexbox to create horizontal menu.
+   justify-content: center centers the navigation items */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Navigation links: Styled as buttons with padding and rounded corners.
+   Transition creates smooth color change on hover.
+   Display: block makes the entire padded area clickable */
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation hover state: Changes background to semi-transparent white
+   to indicate which link the user is hovering over */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Active navigation link: Indicates current page location.
+   Solid white background with purple text for strong visual indicator */
+nav ul li a.active {
+    background-color: #ffffff;
+    color: #4f46e5;
+}
+
+
+/* ========================================
+   MAIN CONTENT STYLES
+   ======================================== */
+
+/* Main: Primary content container with top margin to separate from header */
+main {
+    margin-top: 0;
+}
+
+/* Page Header: Used on interior pages to introduce page content.
+   Gradient background matches header for consistency.
+   Generous padding creates breathing room */
+#page-header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#page-header h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#page-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HERO SECTION (HOME PAGE)
+   ======================================== */
+
+/* Hero Section: Large banner at top of home page with gradient background.
+   Text is centered and white for maximum contrast and impact */
+#hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Hero Content: Container for hero text with max-width for readability */
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Button: Primary call-to-action button.
+   White background with brand color text creates high contrast.
+   Padding makes button large and easy to click.
+   Transition provides smooth hover effect */
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #4f46e5;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+}
+
+/* CTA Button Hover: Inverts colors on hover for interactive feedback */
+.cta-button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary CTA Button: Alternative button style with inverted colors */
+.cta-button.secondary {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+}
+
+.cta-button.secondary:hover {
+    background-color: #3730a3;
+    border-color: #3730a3;
+}
+
+
+/* ========================================
+   SERVICES PREVIEW SECTION (HOME PAGE)
+   ======================================== */
+
+/* Services Preview: Section showcasing service highlights.
+   Padding provides vertical spacing, max-width contains content */
+#services-preview {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#services-preview h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Section Subtitle: Descriptive text below section headings.
+   Gray color creates visual hierarchy below main heading */
+.section-subtitle {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Grid: Three-column layout using CSS Grid.
+   Auto-fit creates responsive columns that wrap on smaller screens.
+   minmax ensures columns don't get too narrow.
+   gap creates space between cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Service Card: Individual service highlight card.
+   Padding creates internal spacing, border and border-radius create card appearance.
+   Transition enables smooth hover effect */
+.service-card {
+    padding: 40px 30px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Service Card Hover: Elevates card and adds shadow on hover for interactivity */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4f46e5;
+}
+
+/* Service Icon: Large emoji or icon container */
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #4f46e5;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.service-card p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   STATISTICS SECTION (HOME PAGE)
+   ======================================== */
+
+/* Stats Section: Displays key metrics with gradient background matching brand.
+   Padding creates generous vertical spacing */
+#stats {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Stats Container: Flexbox layout for statistics.
+   Wraps on smaller screens, gap creates spacing between items */
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Individual Stat: Each statistic display with icon and text */
+.stat-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-item i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.stat-item h3 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   CTA SECTION (MULTIPLE PAGES)
+   ======================================== */
+
+/* CTA Section: Call-to-action sections throughout site.
+   Light background with centered content */
+#cta-section {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   SERVICES DETAIL (WHAT WE DO PAGE)
+   ======================================== */
+
+/* Services Detail Section: Container for detailed service descriptions */
+#services-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Service Detail Article: Individual service section with flexbox layout.
+   Alternating layout (reverse class) creates visual interest */
+.service-detail {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+/* Reverse layout: Swaps order of image and text on alternating services */
+.service-detail.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Service Image: Icon container for service illustrations.
+   flex: 1 allows it to grow, min-width prevents it from getting too small */
+.service-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    color: #4f46e5;
+    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%);
+    padding: 60px;
+    border-radius: 10px;
+}
+
+/* Service Info: Text content for each service */
+.service-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.service-info h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.service-info p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+/* Service Features List: Bulleted list of service features.
+   Each item uses flexbox for icon and text alignment */
+.service-features {
+    list-style: none;
+}
+
+.service-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.service-features i {
+    color: #10b981;
+    margin-right: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   PROCESS SECTION (WHAT WE DO PAGE)
+   ======================================== */
+
+/* Process Section: Shows step-by-step workflow */
+#process {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#process h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Process Steps: Grid layout for process steps.
+   auto-fit creates responsive columns */
+.process-steps {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Process Step: Card showing one step in the process */
+.process-step {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+/* Step Number: Large numbered circle for each step */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.process-step p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PRICING CARDS (PRICING PAGE)
+   ======================================== */
+
+/* Pricing Cards Section: Container for pricing tiers */
+#pricing-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Pricing Card: Individual pricing tier card.
+   Border and shadow create card appearance, transition enables hover effect */
+.pricing-card {
+    background-color: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Pricing Card: Highlighted middle tier with brand color border */
+.pricing-card.featured {
+    border-color: #4f46e5;
+    border-width: 3px;
+}
+
+/* Popular Badge: Label for most popular plan */
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Card Header: Title section of pricing card */
+.card-header h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.package-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* Card Price: Large price display */
+.card-price {
+    margin: 30px 0;
+}
+
+.currency {
+    font-size: 24px;
+    color: #4f46e5;
+    vertical-align: super;
+}
+
+.amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.period {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* Features List: List of included features */
+.features-list {
+    text-align: left;
+    margin: 30px 0;
+}
+
+.features-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list i {
+    color: #10b981;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* Pricing Button: CTA button on pricing cards */
+.pricing-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.pricing-button:hover {
+    background-color: #e5e7eb;
+}
+
+/* Featured pricing button: Brand-colored button for featured plan */
+.pricing-button.featured-button {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+}
+
+.pricing-button.featured-button:hover {
+    background: linear-gradient(135deg, #3730a3 0%, #6d28d9 100%);
+}
+
+
+/* ========================================
+   COMPARISON TABLE (PRICING PAGE)
+   ======================================== */
+
+/* Comparison Table Section: Detailed feature comparison */
+#comparison-table {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#comparison-table h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Table Container: Wrapper for responsive table */
+.table-container {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+/* Table: Styled comparison table.
+   width: 100% makes table fill container, border-collapse removes cell spacing */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table header: Gradient background matches brand colors */
+thead {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Alternating row colors: Improves table readability */
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+
+/* ========================================
+   FAQ SECTION (PRICING PAGE)
+   ======================================== */
+
+/* FAQ Section: Frequently asked questions */
+#faq {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+}
+
+#faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1f2937;
+}
+
+/* FAQ Container: Grid layout for FAQ items */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 25px;
+}
+
+/* FAQ Item: Individual question and answer */
+.faq-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+}
+
+.faq-item h3 i {
+    color: #4f46e5;
+    margin-right: 12px;
+}
+
+.faq-item p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   MISSION SECTION (ABOUT PAGE)
+   ======================================== */
+
+/* Mission Section: About page mission statement */
+#mission {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mission Content: Flexbox layout for text and icon */
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.mission-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.mission-text h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #1f2937;
+}
+
+.mission-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+/* Mission Icon: Large decorative icon */
+.mission-icon {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    font-size: 120px;
+    color: #4f46e5;
+}
+
+
+/* ========================================
+   CORE VALUES SECTION (ABOUT PAGE)
+   ======================================== */
+
+/* Core Values Section: Company values display */
+#core-values {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#core-values h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Values Grid: Four-column responsive grid */
+.values-grid {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Value Card: Individual value display with numbering */
+.value-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Value Number: Positioned number indicator */
+.value-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Value Icon: Icon for each value */
+.value-icon {
+    font-size: 48px;
+    color: #4f46e5;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.value-card p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   WHY CHOOSE US SECTION (ABOUT PAGE)
+   ======================================== */
+
+/* Why Choose Section: Benefits of choosing the service */
+#why-choose {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#why-choose h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Benefits Container: Grid layout for benefit items */
+.benefits-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Benefit Item: Individual benefit card */
+.benefit-item {
+    text-align: center;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 36px;
+    color: #4f46e5;
+}
+
+.benefit-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.benefit-item p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   TEAM SECTION (ABOUT PAGE)
+   ======================================== */
+
+/* Team Section: Founder/team introduction */
+#team {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Founder Profile: Layout for founder information */
+.founder-profile {
+    max-width: 900px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Founder Image: Placeholder for profile photo */
+.founder-image {
+    flex-shrink: 0;
+    font-size: 150px;
+    color: #4f46e5;
+}
+
+/* Founder Info: Text information about founder */
+.founder-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.founder-info h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.founder-title {
+    font-size: 18px;
+    color: #4f46e5;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.founder-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   CONTACT PAGE STYLES
+   ======================================== */
+
+/* Contact Content Section: Layout for form and info */
+#contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+}
+
+/* Contact Form Container: Styling for form section */
+.contact-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-container h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.contact-form-container > p {
+    color: #6b7280;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Form Group: Container for each form field.
+   margin-bottom creates spacing between fields */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Form Labels: Styling for input labels.
+   display: block makes label take full width above input.
+   font-weight makes labels stand out */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 15px;
+}
+
+/* Required field indicator: Red asterisk for required fields */
+.required {
+    color: #ef4444;
+}
+
+/* Form Inputs: Styling for text inputs, email, tel fields.
+   width: 100% makes inputs fill container.
+   padding creates comfortable click/tap area.
+   border and border-radius create clean input appearance.
+   transition enables smooth focus effect */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus state: Highlights active input with brand color border */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* Textarea: Ensures textarea cannot be resized horizontally,
+   only vertically to maintain layout */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Checkbox Group: Special styling for checkbox inputs */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Submit Button: Primary form submission button.
+   Full width makes it prominent and easy to click.
+   Gradient background matches brand colors.
+   Transition enables smooth hover effect */
+.submit-button {
+    width: 100%;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Submit button hover: Darkens on hover and lifts slightly */
+.submit-button:hover {
+    background: linear-gradient(135deg, #3730a3 0%, #6d28d9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+
+/* ========================================
+   CONTACT INFO STYLES
+   ======================================== */
+
+/* Contact Info Container: Right column with contact details */
+.contact-info-container {
+    background-color: #f9fafb;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-info-container h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.contact-info-container > p {
+    color: #6b7280;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Contact Detail: Individual contact method display.
+   Flexbox aligns icon and text horizontally */
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+/* Contact Icon: Circular background for icons */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+/* Contact Text: Text content for each contact method */
+.contact-text h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.contact-text p,
+.contact-text a {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.contact-text a:hover {
+    color: #4f46e5;
+}
+
+/* Contact Note: Additional information like hours */
+.contact-note {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Office Hours: Styled list of business hours */
+.office-hours {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.office-hours h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.office-hours ul {
+    list-style: none;
+}
+
+.office-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.office-hours li:last-child {
+    border-bottom: none;
+}
+
+/* Contact Social: Social media links section */
+.contact-social {
+    margin-top: 30px;
+}
+
+.contact-social h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+/* Social Links: Flexbox layout for social icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+
+/* ========================================
+   MAP SECTION (CONTACT PAGE)
+   ======================================== */
+
+/* Map Section: Location visualization placeholder */
+#map-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#map-section h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+/* Map Placeholder: Styled placeholder for map.
+   In production, this would contain an embedded map */
+.map-placeholder {
+    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%);
+    padding: 80px 40px;
+    border-radius: 10px;
+    color: #4f46e5;
+}
+
+.map-placeholder i {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.map-placeholder p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+
+/* Footer: Main footer container with dark background.
+   Contains multiple columns of information */
+footer {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 60px 20px 20px;
+}
+
+/* Footer Content: Grid layout for footer sections.
+   Creates responsive columns that stack on small screens */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Footer Section: Individual footer column */
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* Footer links: Styling for footer navigation links */
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #d1d5db;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+/* Social Icons: Footer social media links.
+   Display as inline flexbox with spacing */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #374151;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom: Copyright and validation section.
+   Border-top separates from main footer content */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid #374151;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+/* Validation Links: HTML and CSS validator links.
+   Displayed inline with spacing */
+.validation-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.validation-links a {
+    color: #9ca3af;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.validation-links a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet and below: Adjustments for screens 768px and smaller.
+   Reduces font sizes and adjusts layouts for better mobile experience */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-contact {
+        text-align: center;
+    }
+
+    /* Typography adjustments */
+    .hero-content h2,
+    #page-header h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p,
+    #page-header p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /* Service detail layout: Stack vertically on mobile */
+    .service-detail,
+    .service-detail.reverse {
+        flex-direction: column;
+    }
+
+    .service-image {
+        min-width: 100%;
+    }
+
+    /* Mission content: Stack vertically */
+    .mission-content {
+        flex-direction: column;
+    }
+
+    .mission-icon {
+        font-size: 80px;
+    }
+
+    /* Founder profile: Stack vertically */
+    .founder-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-image {
+        font-size: 100px;
+    }
+
+    /* Contact content: Single column */
+    #contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Table: Allow horizontal scroll on small screens */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
+
+/* Mobile: Adjustments for screens 480px and smaller */
+@media (max-width: 480px) {
+    /* Further reduce font sizes */
+    .hero-content h2,
+    #page-header h2 {
+        font-size: 26px;
+    }
+
+    .logo-section h1 {
+        font-size: 24px;
+    }
+
+    /* Navigation: Full width buttons */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+
+    /* Reduce padding */
+    .hero-content,
+    #page-header {
+        padding: 50px 20px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    /* Pricing cards: Ensure readability on very small screens */
+    .pricing-card {
+        padding: 30px 20px;
+    }
+
+    .card-price .amount {
+        font-size: 36px;
+    }
+
+    /* Form: Adjust button padding */
+    .submit-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Margin utilities */
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Display utilities */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+/* Print styles: Optimizes page for printing.
+   Removes unnecessary elements and adjusts colors for print */
+@media print {
+    /* Hide navigation, footer, and interactive elements */
+    header nav,
+    .social-icons,
+    .social-links,
+    .cta-button,
+    .validation-links {
+        display: none;
+    }
+
+    /* Remove backgrounds to save ink */
+    body,
+    header,
+    #hero,
+    #stats,
+    #page-header {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    /* Ensure links show URLs */
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    /* Page breaks */
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* Focus visible: Ensures keyboard navigation is visible.
+   Provides clear focus indicator for accessibility */
+*:focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link: For screen readers and keyboard users.
+   Hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #4f46e5;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Screen reader only: Hides content visually but keeps it accessible to screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* ========================================
+   END OF STYLESHEET
+   ======================================== */
