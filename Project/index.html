@@ -22,35 +22,64 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="hero">
-        <div class="hero-content">
-            <h2>Elevate Your Brand Story</h2>
-            <p>We craft data-driven content strategies that engage audiences and drive real growth for your business.</p>
-            <a href="#" class="cta-button">Get Started</a>
-            <a href="#" class="cta-button secondary">View Portfolio</a>
+    <div id="home" class="page-section active">
+        <div class="hero-content" style="background-image: url('LarryOB.jpg'); background-size: cover; background-position: center; position: relative; padding: 200px 20px; border-radius: 10px;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); border-radius: 10px;"></div>
+            <div style="position: relative; z-index: 2;">
+                <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Wanna experience the thrill of a championship?</h2>
+                <p style="color: rgba(255,255,255,0.95); font-size: 18px; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Like a championship team, your content needs a winning strategy</p>
+                <a href="#services" class="cta-button">Get Started</a>
+                <a href="#services" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 80px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 50px; color: white;">Why Choose Us?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                    <div style="text-align: center;">
+                        <div style="margin-bottom: 15px; display: flex; justify-content: center;">
+                            <img src="PencilPaper.jpg" alt="Expert Team" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 style="color: white; margin-bottom: 10px;">Expert Team</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Seasoned professionals with years of industry experience.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="margin-bottom: 15px; display: flex; justify-content: center;">
+                            <img src="MagGlass.jpg" alt="Proven Results" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 style="color: white; margin-bottom: 10px;">Proven Results</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Data-driven strategies that deliver measurable ROI.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 50px; margin-bottom: 15px;">✓</div>
+                        <h3 style="color: white; margin-bottom: 10px;">24/7 Support</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Always here to help with your content needs.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="services-preview">
+    <div id="services" class="page-section">
         <h2>Our Expertise</h2>
         <p class="section-subtitle">We provide end-to-end content solutions tailored to your goals.</p>
         
         <div class="services-grid">
-            
             <div class="service-card">
                 <div class="service-icon">
                     <img src="rocket.jpg" alt="Rocket Launch" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin: 0 auto;">
                 </div>
                 <h3>Growth Strategy</h3>
-                <p>Launch your brand to new heights with comprehensive market analysis and strategic planning.</p>
+                <p>Launch your brand to new heights with comprehensive market analysis and strategic planning. We identify opportunities and create roadmaps for sustainable growth.</p>
             </div>
 
             <div class="service-card">
@@ -58,7 +87,7 @@
                     <img src="PencilPaper.jpg" alt="Content Creation" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin: 0 auto;">
                 </div>
                 <h3>Content Creation</h3>
-                <p>Engaging blogs, whitepapers, and copy written to capture your unique brand voice.</p>
+                <p>Engaging blogs, whitepapers, and copy written to capture your unique brand voice. From concept to publication, we handle it all.</p>
             </div>
 
             <div class="service-card">
@@ -66,41 +95,83 @@
                     <img src="MagGlass.jpg" alt="SEO & Analytics" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin: 0 auto;">
                 </div>
                 <h3>SEO & Analytics</h3>
-                <p>Deep-dive research and optimization to ensure your content gets found by the right people.</p>
+                <p>Deep-dive research and optimization to ensure your content gets found by the right people. We track performance and refine strategies.</p>
             </div>
+        </div>
 
+        <div id="stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>150+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-smile"></i>
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>300%</h3>
+                    <p>Avg. Traffic Growth</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <i class="fas fa-project-diagram"></i>
-                <h3>150+</h3>
-                <p>Projects Completed</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-smile"></i>
-                <h3>98%</h3>
-                <p>Client Satisfaction</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-chart-line"></i>
-                <h3>300%</h3>
-                <p>Avg. Traffic Growth</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="mission">
+    <div id="about" class="page-section">
+        <h2>About GetRightWithya</h2>
         <div class="mission-content">
             <div class="mission-text">
-                <h2>We Work Where Creativity Meets Data</h2>
+                <h2 style="color: #667eea; margin-bottom: 20px;">We Work Where Creativity Meets Data</h2>
                 <p>At GetRightWithya, we believe that the best content comes from a relaxed mind and a focused strategy. We don't just write words; we build environments for your brand to thrive.</p>
                 <p>Our mission is to simplify the complex digital landscape, giving you the time to focus on what you do best—running your business.</p>
+                <p>Founded in 2020, we've worked with over 150 companies across industries including tech, healthcare, finance, and e-commerce. Our team of content strategists, writers, and analysts work collaboratively to deliver exceptional results.</p>
+                <p><strong>Our Values:</strong></p>
+                <p>• Authenticity in every piece of content we create<br>
+                • Data-driven decisions that drive real impact<br>
+                • Client success is our success<br>
+                • Continuous learning and innovation</p>
             </div>
             <div class="mission-icon">
                 <img src="workplace.jpg" alt="Modern Workspace" style="width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="page-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>We'd love to hear about your project. Reach out to us and let's discuss how we can help elevate your brand.</p>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee;">
+                <h3 style="color: #667eea; margin-bottom: 20px;">Other Ways to Reach Us</h3>
+                <p><strong>Email:</strong> hello@getrightwithya.com</p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9AM - 6PM EST</p>
             </div>
         </div>
     </div>
@@ -114,10 +185,10 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -134,6 +205,43 @@
             <p>&copy; 2025 GetRightWithya. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all sections and links
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Get target section and make it active
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    // Scroll to top of page
+                    window.scrollTo(0, 0);
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>
